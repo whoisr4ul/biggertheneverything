@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html>
-<body style="margin:0;background:black;display:flex;justify-content:center;align-items:center;height:100vh;">
+<head>
+<title>roly_</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:black;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+}
+
+.video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    border:none;
+}
+
+.profile{
+    position:fixed;
+    top:30px;
+    left:30px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:rgba(0,0,0,.6);
+    padding:12px 20px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+    z-index:999;
+}
+
+.profile img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.profile h1{
+    color:white;
+    font-size:28px;
+}
+
+.profile p{
+    color:#7289da;
+    font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="profile">
+    <img src="pfp.jpg">
+    <div>
+        <h1>roly_</h1>
+        <p>Discord: @roly_</p>
+    </div>
+</div>
 
 <iframe
-width="800"
-height="450"
-src="https://www.youtube.com/embed/_f0ftiBSvRs?autoplay=1&mute=1"
-title="YouTube video player"
-frameborder="0"
-allow="autoplay; encrypted-media; fullscreen"
+class="video"
+src="https://www.youtube.com/embed/_f0ftiBSvRs?autoplay=1&mute=1&controls=1"
+allow="autoplay; encrypted-media"
 allowfullscreen>
 </iframe>
 
