@@ -12,10 +12,12 @@
     box-sizing:border-box;
 }
 
-body{
-    background:#000;
-    font-family:Arial,sans-serif;
+html,body{
+    width:100%;
+    height:100%;
     overflow:hidden;
+    font-family:Arial,sans-serif;
+    background:#000;
 }
 
 .video{
@@ -30,18 +32,16 @@ body{
 
 .overlay{
     position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.35);
+    inset:0;
+    background:rgba(0,0,0,.25);
     z-index:2;
+    pointer-events:none;
 }
 
 .card{
     position:fixed;
-    bottom:30px;
-    left:30px;
+    top:30px;
+    right:30px;
 
     display:flex;
     align-items:center;
@@ -55,7 +55,7 @@ body{
     border-radius:18px;
     border:1px solid rgba(255,255,255,.15);
 
-    z-index:99999;
+    z-index:9999;
 
     box-shadow:0 0 30px rgba(0,0,0,.5);
 }
@@ -65,8 +65,7 @@ body{
     height:85px;
     border-radius:50%;
     object-fit:cover;
-
-    border:3px solid #5865F2;
+    border:3px solid rgba(255,255,255,.25);
 }
 
 .username{
@@ -75,16 +74,16 @@ body{
     font-weight:700;
 }
 
-.discord{
-    color:#5865F2;
-    font-size:18px;
-    margin-top:4px;
+.tag{
+    color:white;
+    font-size:16px;
+    margin-top:5px;
 }
 
-.tag{
-    color:#bbb;
-    margin-top:6px;
+.subtitle{
+    color:#bdbdbd;
     font-size:14px;
+    margin-top:6px;
 }
 </style>
 </head>
@@ -93,20 +92,20 @@ body{
 
 <iframe
 class="video"
-src="https://www.youtube.com/embed/_f0ftiBSvRs?autoplay=1&controls=1&loop=1&playlist=_f0ftiBSvRs"
-allow="autoplay; encrypted-media"
+src="https://www.youtube.com/embed/_f0ftiBSvRs?controls=1&loop=1&playlist=_f0ftiBSvRs"
+title="YouTube video player"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 allowfullscreen>
 </iframe>
 
 <div class="overlay"></div>
 
 <div class="card">
-    <img src="pfp.jpg" class="pfp">
+    <img src="pfp.jpg" class="pfp" alt="Profile Picture">
 
     <div>
-        <div class="username">roly_</div>
-        <div class="discord">@roly_</div>
-        <div class="tag">bigger thën everything</div>
+        <div class="username">@roly_</div>
+        <div class="subtitle">bigger thën everything</div>
     </div>
 </div>
 
