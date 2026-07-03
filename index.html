@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>roly_</title>
+<title>@roly_</title>
 
 <style>
 *{
@@ -40,8 +40,9 @@ html,body{
 
 .card{
     position:fixed;
-    top:30px;
-    right:30px;
+    top:50%;
+    left:40px;
+    transform:translateY(-50%);
 
     display:flex;
     align-items:center;
@@ -61,8 +62,8 @@ html,body{
 }
 
 .pfp{
-    width:85px;
-    height:85px;
+    width:90px;
+    height:90px;
     border-radius:50%;
     object-fit:cover;
     border:3px solid rgba(255,255,255,.25);
@@ -70,19 +71,13 @@ html,body{
 
 .username{
     color:white;
-    font-size:28px;
-    font-weight:700;
-}
-
-.tag{
-    color:white;
-    font-size:16px;
-    margin-top:5px;
+    font-size:36px;
+    font-weight:800;
 }
 
 .subtitle{
     color:#bdbdbd;
-    font-size:14px;
+    font-size:15px;
     margin-top:6px;
 }
 </style>
@@ -104,8 +99,7 @@ allowfullscreen>
     <img src="pfp.jpg" class="pfp" alt="Profile Picture">
 
     <div>
-        <div class="username">roly_</div>
-        <div class="tag">@roly_</div>
+        <div class="username">@roly_</div>
         <div class="subtitle">bigger thën everything</div>
     </div>
 </div>
