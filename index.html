@@ -1,105 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>roly_</title>
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-background:#000;
-font-family:Inter,Arial,sans-serif;
-overflow:hidden;
+    background:#000;
+    font-family:Arial,sans-serif;
+    overflow:hidden;
 }
 
 .video{
-position:fixed;
-top:0;
-left:0;
-width:100vw;
-height:100vh;
-border:none;
-z-index:1;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    border:none;
+    z-index:1;
 }
 
 .overlay{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.35);
-z-index:2;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.35);
+    z-index:2;
 }
 
 .card{
-position:fixed;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:420px;
-background:rgba(20,20,20,.55);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.15);
-border-radius:28px;
-padding:30px;
-text-align:center;
-z-index:3;
-box-shadow:0 0 50px rgba(0,0,0,.5);
+    position:fixed;
+    bottom:30px;
+    left:30px;
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(12px);
+
+    padding:18px 24px;
+
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.15);
+
+    z-index:99999;
+
+    box-shadow:0 0 30px rgba(0,0,0,.5);
 }
 
 .pfp{
-width:140px;
-height:140px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid rgba(255,255,255,.3);
-margin-bottom:20px;
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    object-fit:cover;
+
+    border:3px solid #5865F2;
 }
 
 .username{
-color:white;
-font-size:42px;
-font-weight:800;
+    color:white;
+    font-size:28px;
+    font-weight:700;
 }
 
 .discord{
-color:#7289da;
-font-size:22px;
-margin-top:8px;
+    color:#5865F2;
+    font-size:18px;
+    margin-top:4px;
 }
 
-.line{
-width:120px;
-height:4px;
-background:#7289da;
-margin:20px auto;
-border-radius:999px;
-}
-
-.status{
-color:#ddd;
-font-size:16px;
-}
-
-.glow{
-position:absolute;
-width:250px;
-height:250px;
-background:#5865f2;
-filter:blur(150px);
-opacity:.25;
-top:-50px;
-left:50%;
-transform:translateX(-50%);
-pointer-events:none;
+.tag{
+    color:#bbb;
+    margin-top:6px;
+    font-size:14px;
 }
 </style>
 </head>
@@ -108,7 +93,7 @@ pointer-events:none;
 
 <iframe
 class="video"
-src="https://www.youtube.com/embed/_f0ftiBSvRs?autoplay=1&mute=1&controls=0&loop=1&playlist=_f0ftiBSvRs"
+src="https://www.youtube.com/embed/_f0ftiBSvRs?autoplay=1&controls=1&loop=1&playlist=_f0ftiBSvRs"
 allow="autoplay; encrypted-media"
 allowfullscreen>
 </iframe>
@@ -116,22 +101,13 @@ allowfullscreen>
 <div class="overlay"></div>
 
 <div class="card">
-<div class="glow"></div>
+    <img src="pfp.jpg" class="pfp">
 
-<img src="pfp.jpg" class="pfp">
-
-<div class="username">roly_</div>
-
-<div class="discord">
-@roly_
-</div>
-
-<div class="line"></div>
-
-<div class="status">
-bigger thën everything
-</div>
-
+    <div>
+        <div class="username">roly_</div>
+        <div class="discord">@roly_</div>
+        <div class="tag">bigger thën everything</div>
+    </div>
 </div>
 
 </body>
